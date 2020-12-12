@@ -1,0 +1,22 @@
+.card {
+  min-height: 300px;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+.card-text {
+  font-size: 12px;
+  text-align: justify;
+  color: red;
+  text-decoration: line-through;
+  background-color: rgb(219, 189, 189);
+  max-width: 30%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.example {
+  height: 50px;
+}
