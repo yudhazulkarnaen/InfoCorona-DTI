@@ -5,5 +5,20 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "gitlens.gitCommands.closeOnFocusOut": true
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "cSpell.words": [
+    "APIKEY",
+    "AUTHDOMAIN",
+    "Anda",
+    "Cnfc",
+    "PROJECTID",
+    "SENDERID",
+    "USERBYID",
+    "Utdf",
+    "appspot",
+    "firebaseapp",
+    "infocorona",
+    "noreferrer",
+    "yakin"
+  ]
 }
