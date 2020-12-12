@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { TablePagination } from '@material-ui/core';
-import { LoopCircleLoading } from 'react-loadingg';
+import { CommonLoading } from 'react-loadingg';
 import 'bootstrap/dist/css/bootstrap.css';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import app from '../../services/firebase';
 import 'firebase/database';
 
@@ -54,7 +55,10 @@ const CoronaNews = () => {
         return (
           <div className="card">
             <div className="card-body">
-              <p>{moment(tgl.date).format('dddd, Do MMM YYYY')}</p>
+              {/* <p>{moment(tgl.date).format('dddd, Do MMM YYYY')}</p> */}
+              <Link to={`/infoCorona/${tgl.date}`}>
+                <h3>{moment(tgl.date).format('dddd, Do MMM YYYY')}</h3>
+              </Link>
               <ul>{newsdata}</ul>
             </div>
           </div>
@@ -64,15 +68,15 @@ const CoronaNews = () => {
   };
   return (
     <div className="container">
-      <h5>Corona News</h5>
+      <h1>Corona News</h1>
       <hr />
       {isLoading ? (
-        <LoopCircleLoading />
+        <CommonLoading />
       ) : (
         <div>
           <RenderData />
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
+            rowsPerPageOptions={[3, 10, 25]}
             component="div"
             count={news.length}
             rowsPerPage={rowsPerPage}
